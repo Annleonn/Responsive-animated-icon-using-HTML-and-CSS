@@ -1,0 +1,210 @@
+/* Import Poppins font from Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+
+/* This CSS rule sets default styles for all elements on the page */
+* 
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Set up the grid container and center all items */
+html,
+body {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  place-items: center;
+  background: radial-gradient(
+    circle at 24.1% 68.8%,
+    rgb(16, 25, 31) 24.5%,
+    rgb(16, 25, 31) 66%
+  );
+}
+
+/* Set up the container for the icons and set up its display as inline-flex */
+.wrapper {
+  display: inline-flex;
+}
+
+/* Style the individual icon */
+.wrapper .icon 
+{
+  margin: 0 17px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Style the background circle of the icon */
+.wrapper .icon span 
+{
+  display: block;
+  height: 80px;
+  width: 80px;
+  background: #f1f1f1;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.336);
+  transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Style the icon itself */
+.wrapper .icon span i 
+{
+  line-height: 80px;
+  font-size: 30px;
+  color: #000;
+  transition: 0.5s;
+}
+
+/* Set the color of the icon to change on hover */
+.wrapper .icon span i:hover {
+  color: #e8e8e8;
+}
+
+/* Set up the icon to move up on hover */
+.icon:hover {
+  transform: translateY(-12px);
+}
+
+/* Set up the tooltip to pop out and the color of the text to change on hover */
+.wrapper .icon:hover .tooltip {
+  top: -70px;
+  opacity: 0;
+  pointer-events: auto;
+}
+
+
+.wrapper .icon:hover span {
+  color: #fff;
+}
+
+/* Set up the shadow to appear on the text and tooltip on hover */
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1.5px 0px rgba(0, 0, 0, 0.415);
+}
+
+/* Set up the background color of each icon to change on hover */
+.wrapper .facebook:hover span {
+  background: #3564c9;
+}
+
+.wrapper .twitter:hover span {
+  background: #0ba2e3;
+}
+
+.wrapper .instagram:hover span {
+  background: #e52766;
+}
+
+.wrapper .whatsapp:hover span {
+  background: #25ac3a;
+}
+
+.wrapper .github:hover span {
+  background: #333;
+}
+
+.wrapper .youtube:hover span {
+  background: #e02619;
+}
+
+/* Remove default hyperlink styling */
+a
+{
+    text-decoration: none;
+}
+
+/* Set up the tooltip to display on hover */
+.wrapper p
+{
+  display:none;
+  position: absolute;
+  top: -30px;
+  padding: 5px;
+  background-color: #333;
+  color: #f1f1f1;
+  border-radius: 5px;
+}
+
+/* Set up the background color of each text to change on hover */
+.wrapper .facebook:hover p {
+  display: flex;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: #3564c9;
+  top: -30px;
+  border-radius: 5px;
+
+}
+
+.wrapper .twitter:hover p {
+  display: flex;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: #0ba2e3;
+  top: -30px;
+  border-radius: 5px;
+
+}
+
+.wrapper .instagram:hover p {
+  display: flex;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: #e52766;
+  top: -30px;
+  border-radius: 5px;
+
+}
+
+.wrapper .whatsapp:hover p {
+  display: flex;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: #25ac3a;
+  top: -30px;
+  border-radius: 5px;
+
+}
+
+.wrapper .github:hover p {
+  display: flex;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: #333;
+  top: -30px;
+  border-radius: 5px;
+
+}
+
+.wrapper .youtube:hover p {
+  display: flex;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: #e02619;
+  top: -30px;
+  border-radius: 5px;
+
+}
+
+
+@media (max-width: 500px) 
+{
+  /* Reduce font size of icon for smaller screens */
+  .wrapper .icon span i {
+    font-size: 45px;
+  }
+}
